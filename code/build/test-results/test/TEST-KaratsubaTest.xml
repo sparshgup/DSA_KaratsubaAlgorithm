@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="KaratsubaTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-03-11T02:14:51" hostname="Sparshs-MBP.olin.edu" time="0.013">
+  <properties/>
+  <testcase name="multiply()" classname="KaratsubaTest" time="0.01"/>
+  <testcase name="testSizeBase10()" classname="KaratsubaTest" time="0.001"/>
+  <testcase name="testSplitAt()" classname="KaratsubaTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
