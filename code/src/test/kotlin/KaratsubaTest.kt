@@ -1,34 +1,41 @@
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
 import kotlin.test.assertEquals
 
 class KaratsubaTest {
 
+    /**
+     * Tests the multiplication function of the Karatsuba algorithm.
+     */
     @Test
     fun multiply() {
         val karatsuba = Karatsuba()
-        assertEquals(123 * 456, karatsuba.multiply(123, 456))
-        assertEquals(123456789 * 0, karatsuba.multiply(123456789, 0))
-        assertEquals(0 * 0, karatsuba.multiply(0, 0))
-        assertEquals(1 * 1, karatsuba.multiply(1, 1))
-        assertEquals(555 * 555, karatsuba.multiply(555, 555))
+        assertEquals(123L * 456L, karatsuba.multiply(123L, 456L))
+        assertEquals(123456789L * 0L, karatsuba.multiply(123456789L, 0L))
+        assertEquals(0L * 0L, karatsuba.multiply(0L, 0L))
+        assertEquals(1L * 1L, karatsuba.multiply(1L, 1L))
+        assertEquals(555L * 555L, karatsuba.multiply(555L, 555L))
     }
 
+    /**
+     * Tests the sizeBase10 function of the Karatsuba algorithm.
+     */
     @Test
     fun testSizeBase10() {
         val karatsuba = Karatsuba()
-        assertEquals(1, karatsuba.sizeBase10(0))
-        assertEquals(1, karatsuba.sizeBase10(5))
-        assertEquals(3, karatsuba.sizeBase10(123))
-        assertEquals(9, karatsuba.sizeBase10(876543210))
+        assertEquals(1, karatsuba.sizeBase10(0L))
+        assertEquals(1, karatsuba.sizeBase10(5L))
+        assertEquals(3, karatsuba.sizeBase10(123L))
+        assertEquals(9, karatsuba.sizeBase10(876543210L))
     }
 
+    /**
+     * Tests the splitAt function of the Karatsuba algorithm.
+     */
     @Test
     fun testSplitAt() {
         val karatsuba = Karatsuba()
-        assertEquals(Pair(0, 0), karatsuba.splitAt(0, 3))
-        assertEquals(Pair(0, 123), karatsuba.splitAt(123, 3))
-        assertEquals(Pair(123, 456), karatsuba.splitAt(123456, 3))
+        assertEquals(Pair(0L, 0L), karatsuba.splitAt(0L, 3))
+        assertEquals(Pair(0L, 123L), karatsuba.splitAt(123L, 3))
+        assertEquals(Pair(123L, 456L), karatsuba.splitAt(123456L, 3))
     }
 }
